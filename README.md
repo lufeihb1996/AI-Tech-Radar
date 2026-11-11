@@ -2,16 +2,19 @@
 
 # 📡 AI 新物种猎手雷达 · AI Tech Radar
 
-**5 源无词捕获 · 书签收藏比提纯 · 评论区一楼穿透 · TypeSafe Jev 硬核终审 · 按需中文提炼**  
-*Zero-Keyword 5-Source AI Discovery · Bookmark-Ratio Signal · 1st-Reply Link Rescue · Official TypeSafe Jev Judge*
+**5 源无词捕获 · 书签收藏比提纯 · 评论区一楼穿透 · TypeSafe Jev 硬核终审 · 按需中文提炼**
 
-[![Language](https://img.shields.io/badge/UI-简体中文%20%7C%20English-06b6d4)](#)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3b82f6)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2B%20SQLite-10b981)](https://fastapi.tiangolo.com/)
-[![Judge](https://img.shields.io/badge/Judge-TypeSafe%20Jev%20System--1-f59e0b)](https://console.typesafe.ai/)
-[![License](https://img.shields.io/badge/License-MIT-slate)](./LICENSE)
+<p>
+  <a href="./README.md"><img src="https://img.shields.io/badge/🇨🇳_简体中文-当前阅读-06b6d4?style=for-the-badge" alt="简体中文" /></a>
+  <a href="./README_EN.md"><img src="https://img.shields.io/badge/🇬🇧_English-Click_to_Switch-334155?style=for-the-badge" alt="English" /></a>
+</p>
 
-**[🇨🇳 中文说明 & 快速手册](#-项目简介为什么做这个雷达)** · **[🇬🇧 English Overview & Quickstart](#-ai-tech-radar-english-documentation)** · **[📄 Dedicated English Manual](./README_EN.md)**
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3b82f6?style=flat-square" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/Backend-FastAPI%20%2B%20SQLite-10b981?style=flat-square" alt="FastAPI + SQLite" />
+  <img src="https://img.shields.io/badge/Judge-TypeSafe%20Jev%20System--1-f59e0b?style=flat-square" alt="TypeSafe Jev" />
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-64748b?style=flat-square" alt="MIT License" /></a>
+</p>
 
 </div>
 
@@ -74,7 +77,7 @@ flowchart LR
 | **⏱️ 时间窗防老帖霸屏** | 内置 **24小时内 / 近 3 天（默认） / 近 7 天 / 全部历史** 时间过滤，配合 **Jev 分数严格高→低 / 综合爆款度 / 干货收藏比 / 最新时间** 四种排序，保证每天打开第一页都是新鲜硬货。 |
 | **🈶 零浪费按需手动翻译** | 扫描过程**零翻译 Token 消耗**；看中单张外文卡点 **`🌐 译`** 1 秒出中文标题与硬核看点，或点 **`🌐 翻译本页`** 打包翻完当前页（每页 10 条），结果永久存库且支持 **`原 / 译`** 零延迟来回切换。 |
 | **🎬 流式媒体防裂图代理** | 内置 `/api/media` 本地流式代理（支持视频 `HTTP 206 Range` 拖动播放与系统代理自动穿透），彻底解决浏览器直连 X 视频或 Reddit 预览图防盗链黑屏/裂图问题。 |
-| **🔀 全站中英双语界面** | 右上角一键切换 **`中文 / EN`** 界面语言（默认中文，自动记忆偏好）。 |
+| **🔀 全站中英双语界面** | 网页右上角支持一键切换 **`中文 / EN`** 界面语言（默认中文，自动记忆偏好）。 |
 
 ---
 
@@ -89,7 +92,7 @@ flowchart LR
 **Windows 用户（推荐）：**
 直接双击项目根目录下的 **`start-ai-radar.bat`**（首次运行会自动创建 `.venv` 虚拟环境、安装依赖、生成 `.env` 并自动在浏览器打开 `http://127.0.0.1:8096`）。
 
-**命令行手动启动（Windows / macOS / Linux）：**
+**命令行启动（Windows / macOS / Linux）：**
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/lufeihb1996/AI-Tech-Radar.git
@@ -109,7 +112,7 @@ cp .env.example .env
 # Windows PowerShell:
 .\.venv\Scripts\python -m uvicorn app.main:app --host 127.0.0.1 --port 8096
 # macOS / Linux:
-# ./start-ai-radar.sh
+# chmod +x start-ai-radar.sh && ./start-ai-radar.sh
 ```
 启动后浏览器访问：**http://127.0.0.1:8096**
 
@@ -125,7 +128,7 @@ cp .env.example .env
    - 浏览器打开已登录的 [x.com](https://x.com) -> 按 `F12` 打开开发者工具 -> 切到 **Application（应用）** -> 左侧点 **Cookies -> `https://x.com`**；
    - 复制 **`auth_token`**（40 位字符）和 **`ct0`**（160 位字符）粘入弹窗保存即可。
 3. **OpenRouter API Key（用于手动点击中文翻译）**
-   - 前往 [openrouter.ai/keys](https://openrouter.ai/keys) 创建 `sk-or-v1-...` 填入，后台默认调用高性价比极速模型 `deepseek/deepseek-v4-flash`（翻 100 条仅需约 $0.02）。
+   - 前往 [openrouter.ai/keys](https://openrouter.ai/keys) 创建 `sk-or-v1-...` 填入，后台默认调用高性价比极速模型 `deepseek/deepseek-v4-flash`（翻 100 条仅需约 \$0.02）。
 
 ---
 
@@ -169,40 +172,20 @@ AI-Tech-Radar/
 ```
 
 ---
+
+## 🔌 REST API 接口速查
+
+| 请求方法与路径 | 说明 |
+| :--- | :--- |
+| `GET /api/status` | 获取密钥配置状态与各数据源有效条目统计 |
+| `GET /api/items` | 多维分页检索（支持 `source`、`category`、`playability`、`has_video`、`starred`、`hours`、`sort`、`q`、`page`、`page_size`） |
+| `POST /api/scan` | 并发执行多源抓取、X 一楼链接穿透、双指纹去重入库与新帖优先 Jev 打分 |
+| `POST /api/translate` | 按需调用 `deepseek/deepseek-v4-flash` 翻译指定 ID 列表并持久化落库 |
+| `POST /api/star` | 切换单条项目的收藏状态 |
+| `GET /api/media?url=...` | 白名单流式媒体代理（支持 `HTTP Range` 视频分片与防盗链穿透） |
+| `POST /api/settings` | 网页弹窗保存配置至 `.env`（留空字段自动保留原值） |
+
 ---
 
-<div id="-ai-tech-radar-english-documentation"></div>
-
-# 🇬🇧 AI Tech Radar (English Documentation)
-
-**AI Tech Radar** is a self-hosted, high-signal AI discovery terminal designed for AI builders, researchers, and indie hackers. Instead of relying on brittle keyword searches that miss 80% of organic launches, it aggregates **5 live developer ecosystems**, rescues hidden repository links from X 1st-author replies, filters out engagement-bait via **TypeSafe Jev System-1**, and serves clean paginated cards with streaming media proxy and on-demand Chinese digest.
-
-### Why AI Tech Radar?
-- **Zero-Keyword Multi-Source Capture**: Simultaneously tracks **X (For You + Following + Reverse Cross-Trending Lookup)**, **HuggingFace Trending (Models + Spaces)**, **GitHub Surging New Repos (created within 12 days)**, **Reddit (`r/LocalLLaMA` + `r/StableDiffusion` + `r/comfyui`)**, and **Hacker News (`Show HN`)**.
-- **X 1st-Reply Link Penetration**: Creators frequently hide GitHub/HF links in their first reply to avoid X's external-link throttling. AI Tech Radar automatically inspects `TweetDetail` for high-signal linkless posts (skipping already-indexed posts on subsequent scans) and attaches rescued links directly to the card.
-- **Official TypeSafe Jev Evaluation (New-First Queue)**: Evaluates candidates across 4 structured axes (`category`, `playability`, `utility_score`, `is_hype_bait`). Brand-new discoveries always get top priority in the Jev queue ahead of older backlog items, and evaluated items are never billed twice.
-- **Time-Window Freshness & Strict Ranking**: Filter by **Last 24h / Last 3 Days (default) / Last 7 Days / All Time** and sort by **Strict Jev Score**, **Viral Combo**, **Bookmark-to-Like Ratio / Stars**, or **Latest Published** (10 items per page).
-- **Zero-Waste Manual Translation & Bilingual UI**: Full **`中文 / EN`** UI toggle in the header. Scanning consumes **$0** translation tokens; click **`🌐 ZH`** on a single card or **`🌐 Translate Page`** to distill titles & technical highlights via `deepseek/deepseek-v4-flash` on demand, with instant **`Raw / ZH`** toggle.
-- **Built-in Streaming Media Proxy (`/api/media`)**: Streams X MP4 videos (`HTTP 206 Partial Content`) and Reddit/HF thumbnails through your local system proxy with clean headers so videos and images never break due to hotlink blocks or browser PAC rules.
-
-### Quickstart (3 Minutes)
-
-1. **Clone & Launch**
-   - **Windows (1-Click)**: Double-click `start-ai-radar.bat` (auto-creates `.venv`, installs dependencies, creates `.env`, and opens `http://127.0.0.1:8096`).
-   - **macOS / Linux**:
-     ```bash
-     git clone https://github.com/lufeihb1996/AI-Tech-Radar.git
-     cd AI-Tech-Radar
-     chmod +x start-ai-radar.sh
-     ./start-ai-radar.sh
-     ```
-2. **Configure Credentials** (Click **`⚙️ Keys & Cookies`** in the top-right corner of `http://127.0.0.1:8096`, or edit `.env`):
-   - `TYPESAFE_API_KEY`: Get from [console.typesafe.ai](https://console.typesafe.ai) for Jev System-1 scoring (falls back to local heuristic scoring if omitted).
-   - `TWITTER_AUTH_TOKEN` & `TWITTER_CT0`: From logged-in `x.com` DevTools (`F12` -> `Application` -> `Cookies` -> `https://x.com`). Optional if you only use HuggingFace, GitHub, Reddit, and Show HN.
-   - `OPENROUTER_API_KEY`: From [openrouter.ai/keys](https://openrouter.ai/keys) for manual one-click DeepSeek distillation.
-
-### Security & Privacy Notes
-- Your `.env` credentials and local SQLite cache (`app/data/ai_radar.db`) are strictly git-ignored and stored **100% locally on your machine**.
-
-## 📄 License
-Released under the [MIT License](./LICENSE).
+## 📄 开源协议
+本项目基于 [MIT License](./LICENSE) 协议开源。所有个人 API Key 与本地 SQLite 缓存均完全存储在你的本机，绝不上传任何第三方服务器。
